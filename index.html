@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>George Oikonomou — playful rebuild</title>
+<link rel="icon" href="assets/favicon.png" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body data-screen-label="01 Playful Portfolio">
+
+  <!-- ambient layers -->
+  <div class="mesh"></div>
+  <div class="dots"></div>
+  <canvas id="bg3d"></canvas>
+
+  <!-- progress + cursor -->
+  <div class="progress" id="progress"></div>
+  <div class="cursor-ring" id="ring"></div>
+  <div class="cursor-dot" id="dot"></div>
+
+  <!-- nav -->
+  <header>
+    <div class="logo">
+      <span class="dot"></span>
+      <span>george.</span>
+    </div>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#apps">Apps</a>
+      <a href="#skills">Skills</a>
+      <a href="#journey">Journey</a>
+      <a href="#contact">Hi 👋</a>
+    </nav>
+    <button class="menu-mobile" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+  </header>
+
+  <!-- HERO -->
+  <section class="section hero">
+    <!-- decorative doodles -->
+    <svg class="doodle star" width="46" height="46" viewBox="0 0 46 46" fill="none">
+      <path d="M23 3 L27 18 L43 19 L30 28 L34 43 L23 34 L12 43 L16 28 L3 19 L19 18 Z" fill="#ffd84a" stroke="#11142a" stroke-width="2.5" stroke-linejoin="round"/>
+    </svg>
+    <svg class="doodle spark" width="40" height="40" viewBox="0 0 40 40" fill="none">
+      <path d="M20 3 V37 M3 20 H37 M7 7 L33 33 M33 7 L7 33" stroke="#ff6fa3" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+    <svg class="doodle squiggle" width="120" height="40" viewBox="0 0 120 40" fill="none">
+      <path d="M3 20 Q15 3 30 20 T60 20 T90 20 T117 20" stroke="#06b6d4" stroke-width="4" fill="none" stroke-linecap="round"/>
+    </svg>
+    <svg class="doodle dot-cluster" width="80" height="80" viewBox="0 0 80 80" fill="#10b981">
+      <circle cx="10" cy="10" r="5"/><circle cx="30" cy="20" r="4"/><circle cx="15" cy="40" r="3"/>
+      <circle cx="40" cy="48" r="5"/><circle cx="60" cy="30" r="4"/><circle cx="70" cy="55" r="3"/>
+      <circle cx="50" cy="68" r="4"/>
+    </svg>
+
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow"><span class="pulse"></span> Available for new projects</span>
+        <h1 class="h-display">
+          <span class="js-split">Hi, I'm</span>
+          <br>
+          <span class="grad js-split">George.</span>
+        </h1>
+        <p class="lede">
+          I build <b>fast, playful and reliable</b> mobile apps, web apps and websites.
+          Smooth scrolls, snappy UIs, things that load quickly and feel good to use —
+          that's the stuff I love making.
+        </p>
+        <div class="hero-actions">
+          <span class="magnetic"><a class="btn btn--primary" href="#work">See my work <span class="arrow">→</span></a></span>
+          <span class="magnetic"><a class="btn" href="#contact">Say hi <span class="arrow">↗</span></a></span>
+        </div>
+        <div style="margin-top:30px;">
+          <span class="sticker"><span class="dot-green"></span> Greece-based · open to remote</span>
+        </div>
+      </div>
+
+      <div class="portrait-card js-tilt">
+        <span class="tape"></span>
+        <img src="assets/aboutme.jpg" alt="Portrait of George"/>
+        <div class="caption">that's me 👋</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPS -->
+  <section class="section" id="apps">
+    <span class="eyebrow reveal">📱 Apps</span>
+    <h2 class="h-section reveal">Things you can install.</h2>
+    <p class="lede reveal">Real apps in real stores — built end-to-end. Designed, coded, shipped.</p>
+
+    <div class="apps-grid">
+      <a class="app-card reveal" href="https://islehop.web.app/" target="_blank" rel="noopener">
+        <div class="app-shot"><img src="assets/islehop.png" alt="IsleHop"></div>
+        <div class="app-meta">
+          <div class="app-icon">🏝️</div>
+          <h3>IsleHop</h3>
+          <p>One app for all 78 Greek islands — discover, plan trips, find beaches, share costs, weather, hidden gems.</p>
+          <div class="app-stats">
+            <span class="app-stat"><b>78</b> islands</span>
+            <span class="app-stat"><b>28</b> tools</span>
+            <span class="app-stat"><b>2</b> languages</span>
+          </div>
+          <div class="app-stores">
+            <span class="store"><i class="fa-brands fa-apple"></i> App Store</span>
+            <span class="store"><i class="fa-brands fa-google-play"></i> Google Play</span>
+            <span class="store store-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> islehop.web.app</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="app-card reveal" href="https://apps.apple.com/gr/app/repose-finder/id6762454158" target="_blank" rel="noopener">
+        <div class="app-shot" style="background: linear-gradient(135deg,#0a3d2c,#10b981);">
+          <img src="assets/repose-icon.jpg" alt="Repose Finder icon" style="max-width: 220px; max-height: 220px; border-radius: 28px;">
+        </div>
+        <div class="app-meta">
+          <div class="app-icon">🐝</div>
+          <h3>Repose Finder</h3>
+          <p>Find your spot, fast. A mobile app that helps you discover places to rest and refuel — clean UI, snappy search.</p>
+          <div class="app-stats">
+            <span class="app-stat"><b>iOS</b> App Store</span>
+            <span class="app-stat"><b>Android</b> Play Store</span>
+          </div>
+          <div class="app-stores">
+            <span class="store"><i class="fa-brands fa-apple"></i> App Store</span>
+            <span class="store store-link"><i class="fa-brands fa-google-play"></i> Google Play</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Full-stack <span class="star">★</span> Mobile apps <span class="star">★</span> Web apps <span class="star">★</span> React &amp; Next <span class="star">★</span> Flutter <span class="star">★</span> Three.js <span class="star">★</span> GSAP <span class="star">★</span> Python &amp; PHP <span class="star">★</span></span>
+      <span>Full-stack <span class="star">★</span> Mobile apps <span class="star">★</span> Web apps <span class="star">★</span> React &amp; Next <span class="star">★</span> Flutter <span class="star">★</span> Three.js <span class="star">★</span> GSAP <span class="star">★</span> Python &amp; PHP <span class="star">★</span></span>
+    </div>
+  </div>
+
+  <!-- WORK -->
+  <section class="section" id="work">
+    <span class="eyebrow reveal">★ Selected work</span>
+    <h2 class="h-section reveal">Stuff I've shipped.</h2>
+    <p class="lede reveal">A mix of client work, weekend builds and tiny tools I made for fun. Hover the cards — they like that.</p>
+
+    <div class="projects-grid">
+      <a class="proj large reveal js-tilt" href="https://giorgosdata.github.io/seacon.gr/" target="_blank" rel="noopener" style="--tint:#06b6d4">
+        <div class="proj-thumb"><img src="assets/seacon.png" alt=""></div>
+        <span class="proj-badge">GSAP</span>
+        <div class="proj-body">
+          <h3>Seacon</h3>
+          <p>Oil-tanker company landing page. Horizontal scroll, animated counters, premium feel.</p>
+        </div>
+      </a>
+
+      <a class="proj reveal js-tilt" href="https://giorgosdata.github.io/fruiton/" target="_blank" rel="noopener">
+        <div class="proj-thumb"><img src="assets/fruiton.png" alt=""></div>
+        <span class="proj-badge">3D</span>
+        <div class="proj-body">
+          <h3>Fruiton</h3>
+          <p>Playful product page about strawberries with smooth GSAP scroll.</p>
+        </div>
+      </a>
+
+      <a class="proj reveal js-tilt" href="https://giorgosdata.github.io/threejsportfolio/" target="_blank" rel="noopener">
+        <div class="proj-thumb"><img src="assets/threejs.png" alt=""></div>
+        <span class="proj-badge">★ Three.js</span>
+        <div class="proj-body">
+          <h3>Three.js Portfolio</h3>
+          <p>An earlier 3D portfolio built with three.js — interactive scene + selected projects.</p>
+        </div>
+      </a>
+
+      <a class="proj reveal js-tilt" href="https://paroslocalguide.com/" target="_blank" rel="noopener">
+        <div class="proj-thumb"><img src="assets/paros.png" alt=""></div>
+        <span class="proj-badge">★ Live</span>
+        <div class="proj-body">
+          <h3>Paros Local Guide</h3>
+          <p>A travel-agency &amp; local guide site for Paros — bookings, places, things to do.</p>
+        </div>
+      </a>
+
+      <a class="proj reveal js-tilt" href="https://parossafaritours.gr/" target="_blank" rel="noopener">
+        <div class="proj-thumb"><img src="assets/paros-safari.png" alt=""></div>
+        <span class="proj-badge">★ SEO</span>
+        <div class="proj-body">
+          <h3>Paros Safari Tours</h3>
+          <p>SEO + landing page for a Paros jeep-safari tour company.</p>
+        </div>
+      </a>
+
+      <a class="proj reveal js-tilt" href="https://parosatvclub.gr/" target="_blank" rel="noopener">
+        <div class="proj-thumb"><img src="assets/paros-atv.png" alt=""></div>
+        <span class="proj-badge">★ SEO</span>
+        <div class="proj-body">
+          <h3>Paros ATV Club</h3>
+          <p>SEO + landing page for an ATV rental &amp; tour club on Paros.</p>
+        </div>
+      </a>
+
+      <a class="proj reveal js-tilt" href="https://diachron-team.de/" target="_blank" rel="noopener">
+        <div class="proj-thumb"><img src="assets/diachron.png" alt=""></div>
+        <span class="proj-badge">WordPress</span>
+        <div class="proj-body">
+          <h3>Diachron Team</h3>
+          <p>Athletic-science platform — German football federation &amp; FIFA-backed. Built on WordPress.</p>
+        </div>
+      </a>
+
+      <a class="proj reveal js-tilt" href="https://areopoli.com/" target="_blank" rel="noopener">
+        <div class="proj-thumb"><img src="assets/areopoli.png" alt=""></div>
+        <span class="proj-badge">WordPress</span>
+        <div class="proj-body">
+          <h3>Areopoli 1800</h3>
+          <p>Stay &amp; authentic Mani products — olive oil, stories, bookings. Warm WordPress build.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <span class="eyebrow reveal">⚡ Toolbox</span>
+    <h2 class="h-section reveal">What I reach for.</h2>
+    <p class="lede reveal">Strong opinions, lightly held. I pick the boring tool unless the project genuinely needs the shiny one.</p>
+
+    <div class="skill-groups">
+      <div class="skill-group reveal">
+        <h4><span class="emoji">🎨</span> Frontend</h4>
+        <div class="skills-cloud">
+          <span class="tag c-cyan">React</span><span class="tag c-cyan">Next.js</span>
+          <span class="tag c-cyan">TypeScript</span><span class="tag c-cyan">JavaScript</span>
+          <span class="tag c-em">GSAP</span><span class="tag c-em">Three.js</span>
+          <span class="tag">HTML</span><span class="tag">CSS</span>
+          <span class="tag">JSON</span><span class="tag c-pink">SEO</span>
+          <span class="tag c-ind">WordPress</span>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <h4><span class="emoji">⚙️</span> Backend</h4>
+        <div class="skills-cloud">
+          <span class="tag c-ind">Python</span><span class="tag c-ind">FastAPI</span>
+          <span class="tag">Django</span><span class="tag">PHP</span>
+          <span class="tag">MySQL</span><span class="tag c-em">Firebase</span>
+          <span class="tag c-em">Supabase</span><span class="tag">REST</span>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <h4><span class="emoji">💻</span> Languages</h4>
+        <div class="skills-cloud">
+          <span class="tag c-ind">Java</span><span class="tag">C</span>
+          <span class="tag">C++</span><span class="tag c-pink">C#</span>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <h4><span class="emoji">📱</span> Mobile</h4>
+        <div class="skills-cloud">
+          <span class="tag c-cyan">Flutter</span><span class="tag c-cyan">Dart</span>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <h4><span class="emoji">🎮</span> Game &amp; 3D</h4>
+        <div class="skills-cloud">
+          <span class="tag c-em">Blender</span><span class="tag c-pink">Unity</span>
+          <span class="tag c-pink">Unreal Engine</span><span class="tag">Pygame</span>
+          <span class="tag c-em">Lua · Roblox</span>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <h4><span class="emoji">✨</span> Other</h4>
+        <div class="skills-cloud">
+          <span class="tag c-pink">Firebase</span><span class="tag c-em">Supabase</span>
+          <span class="tag c-cyan">REST APIs</span>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <h4><span class="emoji">🎬</span> Creative</h4>
+        <div class="skills-cloud">
+          <span class="tag c-pink">Photo editing</span><span class="tag">GIMP</span>
+          <span class="tag c-pink">Video editing</span><span class="tag">Shotcut</span>
+          <span class="tag">CapCut</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNEY -->
+  <section class="section" id="journey">
+    <span class="eyebrow reveal">🌱 Journey</span>
+    <h2 class="h-section reveal">How I got here.</h2>
+    <p class="lede reveal">Self-taught, then formal, then back to building. Same kid behind the keyboard.</p>
+
+    <div class="timeline">
+      <div class="t-item reveal">
+        <div class="year">2021</div>
+        <h4>First taste of code</h4>
+        <p>Discovered programming in high school. Wrote my first lines of HTML/CSS/JS and immediately wanted to make everything move.</p>
+      </div>
+      <div class="t-item reveal">
+        <div class="year">2022</div>
+        <h4>Self-taught loop</h4>
+        <p>Late nights, online courses, dozens of tiny projects. The "build a thing every weekend" era.</p>
+      </div>
+      <div class="t-item reveal">
+        <div class="year">2023</div>
+        <h4>Graduated, chose web</h4>
+        <p>Finished high school. Decided to specialise in web, design and game dev.</p>
+      </div>
+      <div class="t-item reveal">
+        <div class="year">2024</div>
+        <h4>College year one</h4>
+        <p>Added Python, PHP, MySQL, C and C++ to the mix. First properly-structured projects.</p>
+      </div>
+      <div class="t-item reveal">
+        <div class="year">now</div>
+        <h4>Real client work</h4>
+        <p>Final year of college, shipping GSAP-powered websites, React &amp; Next apps, and Flutter mobile apps that actually live in production.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <span class="eyebrow reveal">✉️ Let's build</span>
+    <h2 class="h-section reveal">Got an idea?<br>I'm in.</h2>
+
+    <div class="contact-card reveal">
+      <div style="position:relative; z-index:1;">
+        <p class="lede" style="margin:0 0 18px;">Tell me about the project — even a one-liner works. I reply within a day or two.</p>
+        <div class="email" id="emailCopy" title="Click to copy">
+          <i class="fa-regular fa-envelope"></i>
+          giorgosigo@gmail.com
+        </div>
+        <div style="margin-top:20px; display:flex; gap:10px;">
+          <a class="btn" href="https://github.com/giorgosdata" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/giorgos-oikonomoy-045671351/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        </div>
+      </div>
+      <form id="contactForm" action="https://formspree.io/f/mqannkbn" method="POST">
+        <div>
+          <label>Your name</label>
+          <input type="text" name="name" placeholder="George ✨" required>
+        </div>
+        <div>
+          <label>Your email</label>
+          <input type="email" name="email" placeholder="you@example.com" required>
+        </div>
+        <div>
+          <label>What's the gist?</label>
+          <textarea rows="3" name="message" placeholder="A booking site / a mobile app / a weekend toy…" required></textarea>
+        </div>
+        <button class="btn btn--dark" type="submit" style="justify-content:center;">SEND IT ↗</button>
+        <p id="formStatus" style="margin:6px 0 0; font-size:14px; font-weight:600; min-height:18px;"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="socials">
+      <a class="soc" href="https://github.com/giorgosdata" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a class="soc" href="https://www.linkedin.com/in/giorgos-oikonomoy-045671351/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      <a class="soc" href="https://www.instagram.com/_.giorgosss.__/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    Made with caffeine, GSAP and Three.js · © 2026 George Oikonomou
+  </footer>
+
+  <!-- LIBS -->
+  <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <script src="scene.js"></script>
+  <script src="anim.js"></script>
+</body>
+</html>
